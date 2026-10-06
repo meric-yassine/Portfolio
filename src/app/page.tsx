@@ -11,7 +11,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SectionShell } from "@/components/SectionShell";
 import { ButtonLink } from "@/components/ButtonLink";
-import { Eye, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import Image from "next/image";
 import type { ProfessionalVolunteerEntry } from "@/data/portfolio";
 import {
@@ -24,7 +24,6 @@ import {
   aboutBio,
   academicCredentials,
   careerPhilosophy,
-  coverLetter,
   professionalSection,
   resumeSection,
 } from "@/data/portfolio";
@@ -117,49 +116,6 @@ export default function Home() {
             >
               {resumeSection.actionLabel}
             </ButtonLink>
-          </div>
-        </SectionShell>
-
-        <SectionShell id="cover-letter" ariaLabelledBy="cover-heading">
-          <SectionHeading
-            id="cover-heading"
-            eyebrow={s.coverLetter.eyebrow}
-            title={s.coverLetter.title}
-            description={s.coverLetter.description}
-          />
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-stretch">
-            <div className="flex h-full flex-col rounded-2xl border border-line/80 bg-card px-6 py-7 shadow-card">
-              <div className="flex flex-1 items-start gap-3">
-                <FileText
-                  className="mt-1 h-[1.125rem] w-[1.125rem] shrink-0 text-ink-muted/55"
-                  strokeWidth={1.5}
-                  aria-hidden
-                />
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-lg font-semibold leading-snug text-ink">
-                    {coverLetter.previewTitle}
-                  </h3>
-                  <p className="mt-4 text-base font-normal leading-[1.65] text-ink-muted">
-                    {coverLetter.previewBody}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <details className="flex h-full min-h-0 flex-col justify-center rounded-2xl border border-line/80 bg-card px-6 py-6 shadow-card open:justify-start md:py-7">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-soft [&::-webkit-details-marker]:hidden">
-                <span>{coverLetter.detailsSummaryLabel}</span>
-                <Eye
-                  className="h-4 w-4 shrink-0 text-ink-muted/60"
-                  strokeWidth={1.5}
-                  aria-hidden
-                />
-              </summary>
-              <div className="mt-5 space-y-3 border-t border-line/80 pt-5 text-base font-normal leading-[1.65] text-ink">
-                {coverLetter.fullParagraphs.map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-              </div>
-            </details>
           </div>
         </SectionShell>
 

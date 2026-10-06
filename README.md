@@ -1,6 +1,6 @@
-# Student developer portfolio
+# Portfolio
 
-Minimal single-page portfolio built with **Next.js**, **TypeScript**, and **Tailwind CSS**. All text and links are centralized in `src/data/portfolio.ts`. Section titles and short intros live in **`SECTION_COPY`** at the top of that file.
+Personal portfolio built with **Next.js**, **TypeScript**, and **Tailwind CSS**. All text and links are centralized in `src/data/portfolio.ts`. Section titles and short intros live in **`SECTION_COPY`** at the top of that file.
 
 ## Run locally
 

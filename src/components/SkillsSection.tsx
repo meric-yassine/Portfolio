@@ -21,7 +21,7 @@ export function SkillsSection() {
       />
 
       <div className="rounded-2xl border border-line/80 bg-card p-6 shadow-card md:p-7">
-        <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 sm:gap-y-5 lg:grid-cols-3 lg:gap-y-6">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-8">
           {SKILL_CATEGORIES.map((category) => (
             <div key={category.id} className="min-w-0">
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted">

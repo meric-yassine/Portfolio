@@ -28,6 +28,7 @@ import {
   Terminal,
   TestTube,
   Circle,
+  Cloud,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
 
@@ -53,6 +54,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   git: GitBranch,
   github: Github,
   container: Container,
+  cloud: Cloud,
   send: Send,
   code: Code2,
   cpu: Cpu,

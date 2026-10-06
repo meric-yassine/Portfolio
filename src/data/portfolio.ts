@@ -9,7 +9,7 @@
  *   • RESUME_PDF_PATH - your résumé PDF in /public
  *   • CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL
  *   • YOUR_NAME, YOUR_TITLE, heroKicker, heroIntro
- *   • aboutBio, careerPhilosophy, resumeSection, coverLetter
+ *   • aboutBio, careerPhilosophy, resumeSection
  *   • academicCredentials (education, certifications, awards, transcript)
  *   • ACADEMIC_PROJECTS - keep exactly one isCapstone: true
  *   • CAPSTONE_TABS - capstone write-ups per assignment
@@ -155,7 +155,7 @@ export const PROFILE_IMAGE_SRC = "/IMG_9768%202.JPG";
 export const PROFILE_IMAGE_ALT = `Portrait of ${YOUR_NAME}`;
 export const RESUME_PDF_PATH = "/MericYassine_Resume.pdf";
 
-export const SITE_DESCRIPTION = `${YOUR_NAME} - computer programming student & software developer`;
+export const SITE_DESCRIPTION = `${YOUR_NAME} - Computer Programming and Analysis graduate and software developer`;
 
 /** Section titles & one-line intros - edit in one place */
 export const SECTION_COPY: Record<string, SectionHeadingCopy> = {
@@ -165,7 +165,7 @@ export const SECTION_COPY: Record<string, SectionHeadingCopy> = {
   },
   philosophy: {
     eyebrow: "Goals",
-    title: "Philosophy / Statement of Career Goal",
+    title: "Career goals",
   },
   skills: {
     eyebrow: "Toolkit",
@@ -176,12 +176,6 @@ export const SECTION_COPY: Record<string, SectionHeadingCopy> = {
   resume: {
     eyebrow: "Résumé",
     title: "Résumé",
-  },
-  coverLetter: {
-    eyebrow: "Applications",
-    title: "Cover letter",
-    description:
-      "A sample cover letter I adapt for junior developer roles, focused on clear communication, relevant projects, and honest representation of my experience.",
   },
   credentials: {
     eyebrow: "Education",
@@ -197,10 +191,10 @@ export const SECTION_COPY: Record<string, SectionHeadingCopy> = {
     eyebrow: "Capstone",
     title: "Capstone project",
     description:
-      "Deliverables and notes for my capstone course-organized by topic.",
+      "Project documents for GlamUp!, my capstone, organized by topic.",
   },
   professional: {
-    eyebrow: "Beyond class",
+    eyebrow: "Experience",
     title: "Other experience",
     description: "Professional experience and volunteering.",
   },
@@ -216,7 +210,6 @@ export const NAV_ITEMS: NavItem[] = [
   { id: "philosophy", label: "Goals" },
   { id: "skills", label: "Skills" },
   { id: "resume", label: "Résumé" },
-  { id: "cover-letter", label: "Letter" },
   { id: "credentials", label: "School" },
   { id: "work-samples", label: "Projects" },
   { id: "capstone", label: "Capstone" },
@@ -226,17 +219,17 @@ export const NAV_ITEMS: NavItem[] = [
 
 /** Two short paragraphs for the hero intro */
 export const heroIntro = [
-  "I’m a computer programming student with a background in architecture, focused on building clean, practical applications.",
-  "I enjoy working with TypeScript, React, and backend APIs to turn ideas into working products. I’m currently seeking a junior developer role where I can keep learning and contributing.",
+  "I’m a recent Computer Programming and Analysis graduate with a background in architecture. I bring together software development, technical problem solving, design thinking, and close attention to detail.",
+  "I’ve worked on full-stack and mobile applications through coursework and team projects. I’m looking for an entry-level or junior role where I can keep learning and contribute to real products.",
 ] as const;
 
 export const aboutBio = {
   lead:
-    "I’m a computer programming student at George Brown Polytechnic, working toward an Advanced Diploma in Computer Programming. I like building practical, user-focused applications through coursework, team projects, and my capstone. I enjoy working across the stack - especially TypeScript, React, and backend APIs. I learn best by building, debugging, and iterating. I care about writing clean, readable code and shipping software that stays simple, useful, and easy to understand.",
+    "I graduated with Honours from the Computer Programming and Analysis Advanced Diploma at George Brown Polytechnic. Through the program I worked on software, web, and backend development, databases, mobile development, and cloud technologies, along with Git, GitHub, and DevOps fundamentals.",
   priorEducation:
-    "Before transitioning into software development, I completed a Bachelor’s degree in Architecture at Yıldız Technical University, where I developed strong design thinking, analytical problem-solving, and structured planning skills.",
+    "Before software, I completed a Bachelor’s degree in Architecture at Yıldız Technical University in Istanbul. That background still shapes how I work: design thinking, organization, visual awareness, and a structured way of solving problems.",
   interests:
-    "Right now I’m focused on full-stack development with TypeScript, React, and Node.js, plus databases and wiring up complete applications end to end. I’m getting more comfortable with Git, testing, and collaborating on larger projects through team work and capstone milestones. I’m looking for a junior developer role - ideally in full-stack or frontend where I can keep learning and contribute to real-world products.",
+    "I enjoy building practical applications that solve real-world problems. I’m looking for an entry-level or junior role where I can keep growing technically and contribute to products people use.",
 };
 
 /** Goals section (#philosophy) - quote + subsection titles & bodies; edit here only */
@@ -262,13 +255,13 @@ export const careerPhilosophy = {
       id: "how-i-work-with-others",
       title: "How I work with others",
       body:
-        "In team projects like capstone, I value communication, readable code, realistic timelines, and staying organized through Git and documentation. I try to be dependable, open to feedback, and focused on building solutions that make sense not only for me, but for the people working with me.",
+        "In team projects, including my capstone, I value communication, readable code, realistic timelines, and staying organized through Git and documentation. I try to be dependable, open to feedback, and focused on building solutions that make sense for the people working with me.",
     },
     {
       id: "where-im-headed",
       title: "Where I’m headed",
       body:
-        "I’m currently working toward a junior developer role, ideally in full-stack or frontend development. My goal is to keep improving through real-world projects, collaboration, and continuous learning, while building software that is clear, reliable, and useful.",
+        "I’m ready to start my career in software and IT in an entry-level or junior role, where I can keep growing technically and contribute to real applications. Front-end development is especially appealing, because it lets me combine software development with the design thinking, visual awareness, and attention to detail I built through architecture. I’m also interested in full-stack development, software and backend work, application development, and junior roles related to cloud or DevOps.",
     },
   ] satisfies CareerPhilosophySection[],
 };
@@ -278,99 +271,72 @@ export const careerPhilosophy = {
 // -----------------------------------------------------------------------------
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    id: "frontend",
-    title: "Frontend",
+    id: "programming",
+    title: "Programming / Development",
     items: [
-      { label: "HTML", icon: "layout" },
-      { label: "CSS", icon: "paintbrush" },
+      { label: "Java", icon: "java" },
       { label: "JavaScript", icon: "braces" },
       { label: "TypeScript", icon: "typescript" },
-      { label: "React", icon: "component" },
-    ],
-  },
-  {
-    id: "backend-data",
-    title: "Backend, APIs & Databases",
-    items: [
+      { label: "Python", icon: "python" },
+      { label: "C#", icon: "csharp" },
+      { label: "HTML", icon: "layout" },
+      { label: "CSS", icon: "paintbrush" },
       { label: "Node.js", icon: "server" },
       { label: "Express", icon: "server" },
-      { label: "REST APIs", icon: "link" },
-      { label: "GraphQL", icon: "share" },
-      { label: "PostgreSQL", icon: "database" },
-      { label: "MongoDB", icon: "database" },
-      { label: "SQL", icon: "table" },
-      { label: "Firebase", icon: "flame" },
-    ],
-  },
-  {
-    id: "mobile",
-    title: "Mobile / App",
-    items: [
+      { label: "React", icon: "component" },
       { label: "React Native", icon: "smartphone" },
       { label: "Expo", icon: "smartphone" },
       { label: "SwiftUI", icon: "apple" },
-      { label: "Android development basics", icon: "smartphone" },
+      { label: "ASP.NET MVC", icon: "layers" },
+      { label: "Android", icon: "smartphone" },
+    ],
+  },
+  {
+    id: "databases",
+    title: "Databases",
+    items: [
+      { label: "MongoDB", icon: "database" },
+      { label: "SQL", icon: "table" },
+      { label: "Oracle", icon: "database" },
+      { label: "PostgreSQL", icon: "database" },
+      { label: "MySQL", icon: "database" },
     ],
   },
   {
     id: "tools",
-    title: "Tools & Workflow",
+    title: "Tools / Platforms",
     items: [
       { label: "Git", icon: "git" },
       { label: "GitHub", icon: "github" },
       { label: "Docker", icon: "container" },
+      { label: "AWS", icon: "cloud" },
+      { label: "Firebase", icon: "flame" },
       { label: "Postman", icon: "send" },
       { label: "VS Code", icon: "code" },
       { label: "Rider · PyCharm · PhpStorm", icon: "cpu" },
     ],
   },
   {
-    id: "concepts",
-    title: "Concepts / Other",
+    id: "other",
+    title: "Other",
     items: [
+      { label: "REST APIs", icon: "link" },
+      { label: "GraphQL", icon: "share" },
       { label: "OOP", icon: "box" },
+      { label: "Full-stack development", icon: "layers" },
+      { label: "Agile", icon: "box" },
       { label: "API integration", icon: "plug" },
       { label: "Responsive design", icon: "responsive" },
       { label: "Testing basics", icon: "test" },
       { label: "Database design", icon: "tableprops" },
-      { label: "Full-stack development", icon: "layers" },
-    ],
-  },
-  {
-    id: "languages",
-    title: "Programming Languages",
-    items: [
-      { label: "Java", icon: "java" },
-      { label: "Python", icon: "python" },
-      { label: "C#", icon: "csharp" },
-      { label: "JavaScript", icon: "braces" },
-      { label: "TypeScript", icon: "typescript" },
-      { label: "SQL", icon: "table" },
     ],
   },
 ];
 
 export const resumeSection = {
   summary:
-    "A concise overview of my experience, projects, and technical background. It highlights the work I’ve built and the skills I’m continuing to develop.",
+    "An overview of my education, projects, and technical background.",
   actionLabel: "View résumé",
-};
-
-/** Cover letter section - preview card, CTA label, and full draft paragraphs */
-export const coverLetter = {
-  previewTitle: "Junior developer application",
-  previewBody:
-    "A structured starting point I tailor for each application-focused on clarity, relevant projects, and what I’ve built through coursework and capstone.",
-  /** Label on the expandable card (<details> summary) */
-  detailsSummaryLabel: "View full cover letter",
-  fullParagraphs: [
-    "Hi there,",
-    "I’m writing to apply for a junior developer role with your team. I’m an Advanced Diploma student in Computer Programming at George Brown Polytechnic, with hands-on experience building full-stack apps using TypeScript, React, Node.js, and databases - both in coursework and through my capstone.",
-    "I learn by shipping small slices of work, reading docs when I’m stuck, and taking feedback seriously. I’m comfortable with Git, collaborating on group deliverables, and writing code that teammates can follow.",
-    "I’d welcome the chance to contribute to real products while continuing to grow. Thank you for your time-I’d be glad to talk more.",
-    "Best,",
-    YOUR_NAME,
-  ],
 };
 
 // -----------------------------------------------------------------------------
@@ -381,10 +347,10 @@ export const academicCredentials = {
     {
       id: "edu-gbc",
       institution: "George Brown Polytechnic · Toronto",
-      credential: "Advanced Diploma, Computer Programming",
-      dates: "2023 – present · graduating 2026 (expected)",
+      credential: "Computer Programming and Analysis — Advanced Diploma",
+      dates: "2023 – 2026",
       detail:
-        "Coursework covers object-oriented programming, web development, databases, systems analysis, and a team capstone. I focus on full-stack work-TypeScript and React on the client, Node.js and REST APIs on the server, and PostgreSQL, MongoDB, and SQL for persistence.",
+        "Graduated with Honours. Coursework covered object-oriented programming, web development, databases, systems analysis, and a team capstone. I focused on full-stack work: TypeScript and React on the client, Node.js and REST APIs on the server, and PostgreSQL, MongoDB, and SQL for persistence.",
       logoImage: {
         src: "/logo_gbp.svg",
         alt: "George Brown Polytechnic logo",
@@ -408,7 +374,7 @@ export const academicCredentials = {
       credential: "Bachelor’s Degree in Architecture",
       dates: "2012 – 2017",
       detail:
-        "Developed strong problem-solving, design thinking, and project planning skills, with experience translating complex requirements into structured solutions.",
+        "Developed design thinking, visual awareness, organization, and project planning skills, with experience turning complex requirements into structured solutions.",
       logoImage: {
         src: "/logo-en_ytu.svg",
         alt: "Yıldız Technical University logo",
@@ -454,10 +420,10 @@ export const academicCredentials = {
   awards: [
     {
       id: "award-deans-list",
-      name: "Dean’s List — 5 Consecutive Semesters",
+      name: "Dean’s List — 6 Consecutive Semesters",
       issuer: "George Brown Polytechnic",
       description:
-        "Awarded Dean’s List recognition for five consecutive semesters with a 3.89 GPA, reflecting consistent academic excellence throughout my program.",
+        "Awarded Dean’s List recognition for six consecutive semesters with a 3.89 GPA, reflecting consistent academic excellence throughout my program.",
       lettersPdf: {
         href: "/deans-list-awards.pdf",
         label: "View letters",
@@ -478,9 +444,9 @@ export const academicCredentials = {
 export const ACADEMIC_PROJECTS: AcademicProject[] = [
   {
     id: "glamup",
-    title: "GlamUp - Beauty Services Marketplace (Capstone)",
+    title: "GlamUp! — Beauty Services Platform (Capstone)",
     description:
-      "A full-stack mobile application connecting clients with beauty professionals, enabling service discovery, booking, and profile management in a single platform.\n\nDeveloped using React Native, TypeScript, and Expo, with Firebase for backend services and data management. Focused on building scalable booking workflows, clean UI components using React Native Paper, and a user-friendly mobile experience.",
+      "GlamUp! was my capstone project, and a chance to apply skills from the three-year Computer Programming and Analysis program. It is a beauty services platform that connects clients with beauty professionals, covering profiles, bookings, ratings and reviews, and professional management.\n\nI worked on it with a four-person team. We built the mobile app with React Native, TypeScript, and Expo for Android and iOS, and used Firebase for backend services and React Native Paper for the interface. It was selected as a guest student project presentation at the George Brown Polytechnic bootcamp showcase. I’m proud of it because it combined software development, UI/UX thinking, teamwork, Git collaboration, and problem solving.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -498,7 +464,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     id: "inventory-mvc",
     title: "Inventory Management System",
     description:
-      "Web-based inventory management system built with ASP.NET MVC, supporting product tracking, CRUD operations, and structured data management.",
+      "A web application for tracking products and managing inventory. I built it with ASP.NET MVC and C#, including CRUD operations and a SQL Server database.",
     technologies: ["ASP.NET MVC", "C#", "SQL Server"],
     links: {
       watchDemo: "https://www.youtube.com/watch?v=5MWn51EPhNM",
@@ -510,7 +476,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     id: "voting-app",
     title: "Voting Application",
     description:
-      "Web application allowing users to securely submit and track votes, with dynamic content rendering and database integration using PHP and MySQL.",
+      "A web application for submitting and tracking votes. I built it with PHP and MySQL, using HTML and CSS for the interface and a database to store votes.",
     technologies: ["PHP", "MySQL", "HTML", "CSS"],
     links: {
       watchDemo: "https://www.youtube.com/watch?v=30SltqyYDV0",
@@ -521,7 +487,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     id: "ml-project",
     title: "Machine Learning Project",
     description:
-      "Machine learning project using a COVID-19 symptoms dataset to train a Decision Tree model for infection prediction, including preprocessing, feature selection, and evaluation.",
+      "A machine learning project that used a COVID-19 symptoms dataset to train a Decision Tree model for infection prediction. I worked through preprocessing, feature selection, and model evaluation with Python, pandas, NumPy, and scikit-learn.",
     technologies: [
       "Python",
       "pandas",
@@ -540,7 +506,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     id: "gomoku-ai-minimax",
     title: "Gomoku Game with AI (Minimax)",
     description:
-      "Command-line Gomoku (Five in a Row) game implemented in Java, featuring both human vs. human and human vs. AI modes using a minimax algorithm with alpha-beta pruning.",
+      "A command-line Gomoku (Five in a Row) game in Java, with human vs. human and human vs. AI modes. I implemented the AI with a minimax algorithm and alpha-beta pruning.",
     technologies: [
       "Java",
       "Data Structures",
@@ -564,7 +530,7 @@ export const CAPSTONE_TABS: CapstoneTab[] = [
     label: "Summary",
     documentTitle: "Project Summary",
     paragraphs: [
-      "High-level overview of the GlamUp capstone: problem, scope, and what the product delivers.",
+      "GlamUp! was my capstone: a beauty services platform connecting clients with beauty professionals. Our four-person team worked on profiles, bookings, ratings and reviews, and professional management, using React Native, TypeScript, Expo, and Firebase. It was selected as a guest student project presentation at the George Brown Polytechnic bootcamp showcase, and it let me apply what I learned across the three-year program.",
     ],
     documentLinks: [
       {
@@ -684,9 +650,9 @@ export const professionalSection = {
         src: "/logo_gbp.svg",
         alt: "George Brown Polytechnic logo",
       },
-      dates: "May 2025 – Present",
+      dates: "May 2025 – May 2026",
       description:
-        "Assisted students with technology-related inquiries, including campus systems and digital tools. Acted as a liaison between students and college services, resolving issues and supporting access to resources.",
+        "Helped students with campus systems, digital tools, and technology questions. Communicated with college services to resolve issues and connect people with the right support.",
     },
     {
       id: "work-tjx-sales",
@@ -698,7 +664,7 @@ export const professionalSection = {
       },
       dates: "Sep 2024 – Present",
       description:
-        "Provided customer support in a fast-paced retail environment, resolving issues and mentoring new associates on POS systems and store procedures. Recognized for teamwork and reliability during high-volume periods.",
+        "Helped customers in a busy retail environment, resolved issues, and showed new associates how to use the POS system and follow store procedures. The role depended on teamwork, reliability, and staying organized during busy periods.",
     },
     {
       id: "work-architect-mimari",
@@ -710,7 +676,7 @@ export const professionalSection = {
       },
       dates: "Feb 2019 – Mar 2020",
       description:
-        "Worked on architectural design and project planning, translating client requirements into structured solutions. Coordinated with teams, managed project details, and contributed to budgeting and procurement. Developed strong analytical thinking, attention to detail, and problem-solving skills.",
+        "Worked on architectural design and project planning, turning client requirements into structured solutions. Coordinated with the team on project details, budgeting, and procurement, which called for organization, attention to detail, and problem solving.",
     },
   ] satisfies ProfessionalVolunteerEntry[],
   volunteer: [
@@ -724,7 +690,7 @@ export const professionalSection = {
       },
       dates: "Apr 2024",
       description:
-        "Welcomed and guided prospective students and families during campus events, answering questions about programs and student life and helping create a positive experience.",
+        "Welcomed prospective students and families at a campus open house, answered questions about programs and student life, and helped the event run smoothly.",
     },
   ] satisfies ProfessionalVolunteerEntry[],
   recommendations: {
